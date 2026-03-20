@@ -1,4 +1,7 @@
-type Status = 'active' | 'blocked' | 'expired' | 'cancelled' | 'completed' | 'pending' | 'failed' | 'rolled_back'
+type Status =
+  | 'active' | 'blocked' | 'expired' | 'cancelled'
+  | 'completed' | 'pending' | 'failed' | 'rolled_back'
+  | 'inactive' | 'frozen' | 'closed'
 
 const config: Record<Status, { label: string; color: string; icon?: string }> = {
   active: { label: 'Activa', color: 'var(--color-status-success)' },
@@ -9,6 +12,9 @@ const config: Record<Status, { label: string; color: string; icon?: string }> = 
   pending: { label: 'En proceso', color: 'var(--color-status-warning)' },
   failed: { label: 'Fallida', color: 'var(--color-status-error)' },
   rolled_back: { label: 'Revertida', color: 'var(--color-status-rollback)' },
+  inactive: { label: 'Inactiva', color: 'var(--color-status-neutral)' },
+  frozen: { label: 'Congelada', color: 'var(--color-brand-primary)' },
+  closed: { label: 'Cerrada', color: 'var(--color-status-neutral)' },
 }
 
 export default function StatusBadge({ status }: { status: Status }) {
