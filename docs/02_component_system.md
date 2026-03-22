@@ -104,6 +104,7 @@ Componente de una sola responsabilidad: comunicar el estado de una entidad (cuen
 - Alto: 20px
 - Padding horizontal: 8px · Padding vertical: 2px
 - Gap entre dot y label: 4px
+- Min-width en tabla: 90px (para homogeneidad visual entre variantes)
 
 ---
 
@@ -549,7 +550,13 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 | Transferir | `ArrowLeftRight` | 20 |
 | Logout | `LogOut` | 18 |
 
-**Comportamiento del drawer mobile:** El drawer siempre renderiza en modo `expanded=true` (labels visibles, nombre de usuario, logout) independientemente del viewport. Se controla vía prop `isDrawerOpen` y `onClose` desde AppShell.
+**Comportamiento del drawer mobile:** El drawer siempre renderiza en modo `expanded=true` (labels visibles, nombre de usuario, logout) independientemente del viewport. Se controla vía prop `isDrawerOpen` y `onClose` desde AppShell. En mobile, un indicador circular animado (lucide `ChevronRight`, opacity 0.15) sugiere el gesto de deslizar para abrir el sidebar. La animación se ejecuta una sola vez al cargar.
+
+**Toggle de colapso en desktop:** Botón en la parte inferior del sidebar (lucide `PanelLeftClose`/`PanelLeftOpen`) que alterna entre expandido (240px) y colapsado (64px). El estado se controla desde AppShell vía props `collapsed` y `onToggleCollapse`.
+
+**Navegación general:** El ítem "Movimientos" (lucide `Receipt`) navega a `/transactions` mostrando todos los movimientos de ambas cuentas con `AccountTypeBadge` (C-15).
+
+**Detalle con navegación Ant/Sig:** Desde la vista de movimientos generales, se pasan UUIDs vía `location.state`. En `TransactionDetailPage` aparecen botones "Anterior"/"Siguiente" (desktop) o "Ant."/"Sig." (mobile) flanqueando el badge de estado.
 
 ---
 
