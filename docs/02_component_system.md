@@ -218,6 +218,23 @@ Componente atómico que identifica si un movimiento pertenece a la cuenta de dé
 
 ---
 
+### C-16 — Logotipo de marca (`BrandLogo`)
+
+Componente visual de identidad para S-01 Login. Reemplaza el heading textual simple de "DistriBank" por lockup con isotipo + wordmark.
+
+**Reglas visuales:**
+- Isotipo tipo escudo con nodos/red en escala azul de marca (`color.brand.primary` + variantes claras).
+- Wordmark en mayúsculas "DISTRIBANK" con `type.display`/Sora en `color.text.primary`.
+- Glow sutil detrás del isotipo en azul con opacidad baja (no competir con CTA principal).
+- No incluye subtítulo en el recurso de logo (el copy contextual de pantalla vive fuera del asset).
+
+**Uso en S-01:**
+- Alineado al centro.
+- Ancho recomendado: 280–320px en mobile/desktop compacto.
+- Debe conservar proporción y legibilidad en `bg color.surface.base`.
+
+---
+
 ## 2. Componentes moleculares
 
 ---
@@ -564,7 +581,7 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 
 | Pantalla | Componentes usados |
 |---|---|
-| S-01 Login | Inputs, botón primario |
+| S-01 Login | C-16 BrandLogo, Inputs, botón primario |
 | S-02 Home | C-06 AccountCard ×2, C-14 SidebarNav (via AppShell), C-02 VIPBadge (condicional) |
 | S-03 Detalle Débito | C-06 (compact), C-08 TransactionRow ×3, C-02 VIPBadge, C-13 Header |
 | S-04 Detalle Crédito | C-06 (compact), C-07 CreditUsageBar, C-08 ×3, C-02 VIPBadge, C-13 Header |

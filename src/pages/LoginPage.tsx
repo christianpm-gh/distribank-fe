@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { z } from 'zod/v4'
 import { useLogin } from '@/hooks/useAuth'
+import distribankLogoBrand from '@/assets/distribank-logo-brand.svg'
 
 const loginSchema = z.object({
   email: z.email('Ingresa un email válido'),
@@ -37,7 +38,11 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-surface-base px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <h1 className="font-sora text-3xl font-bold text-text-primary">DistriBank</h1>
+          <img
+            src={distribankLogoBrand}
+            alt="DistriBank"
+            className="mx-auto w-full max-w-[320px] drop-shadow-[0_0_16px_rgba(26,86,219,0.4)]"
+          />
           <p className="mt-2 text-sm text-text-secondary">Ingresa a tu cuenta</p>
         </div>
 
