@@ -196,6 +196,27 @@ Aparece en S-05 (filas), S-06 (detalle), S-10 (confirmación), S-11 (resultado).
 
 ---
 
+### C-15 — Badge de tipo de cuenta (`AccountTypeBadge`)
+
+Componente atómico que identifica si un movimiento pertenece a la cuenta de débito o crédito. Aparece en S-02 (actividad reciente), S-12 (movimientos generales), y en `TransactionRow` con variante `card`.
+
+**Variantes por `accountType`:**
+
+| Variante | Ícono (lucide) | Label ES | Color |
+|---|---|---|---|
+| `CHECKING` | `Wallet` (12px) | "Débito" | `color.brand.primary` bg 15% |
+| `CREDIT` | `CreditCard` (12px) | "Crédito" | `color.brand.accent` bg 15% |
+
+**Anatomía:**
+```
+[ícono] Label
+  border-radius: radius.sm
+  padding: space.1 space.1.5
+  font: type.caption, peso 500
+```
+
+---
+
 ## 2. Componentes moleculares
 
 ---
@@ -296,6 +317,20 @@ Componente de lista. Se repite en S-05 (historial) y en la sección de movimient
 **Estado hover/pressed:** Background `color.surface.elevated` con transición 100ms.
 
 **Variante `size=compact`** (movimientos recientes en S-03/S-04): sin `TransactionTypeChip`, sin `StatusBadge` — solo `DirectionIndicator`, concepto, monto y fecha.
+
+**Variante `variant=table-row`** (desktop en S-05): Renderiza como `<tr>` con columnas: Dirección | Tipo | Descripción | Fecha | Monto | Estado. Opcionalmente incluye columna Cuenta (`AccountTypeBadge C-15`) vía prop `sourceAccountType`.
+
+**Variante `variant=card`** (mobile en S-05, S-12): Card con border, rounded-lg, p-4, bg `color.surface.card`. Layout interno:
+```
+┌───────────────────────────────────────┐
+│ [C-04] Contraparte        [C-05 monto]│
+│ [C-03] · Fecha            [C-01 badge]│
+│ [C-15 AccountTypeBadge]               │
+└───────────────────────────────────────┘
+```
+`AccountTypeBadge` solo se muestra si prop `sourceAccountType` está presente.
+
+**Prop `sourceAccountType?: AccountType`:** Cuando se pasa, muestra `AccountTypeBadge` en las variantes list, card y table-row.
 
 ---
 
@@ -472,6 +507,7 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 │  ┌────────────────────┐  │
 │  │ 🏠  Inicio         │  │  ← lucide Home, active: border-l brand-primary
 │  └────────────────────┘  │
+│  │ 🧾  Movimientos    │  │  ← lucide Receipt
 │  │ 💳  Tarjetas       │  │  ← lucide CreditCard
 │  │ ↔   Transferir     │  │  ← lucide ArrowLeftRight
 │                          │
@@ -508,9 +544,12 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 | Ítem | Ícono | Size |
 |---|---|---|
 | Inicio | `Home` | 20 |
+| Movimientos | `Receipt` | 20 |
 | Tarjetas | `CreditCard` | 20 |
 | Transferir | `ArrowLeftRight` | 20 |
 | Logout | `LogOut` | 18 |
+
+**Comportamiento del drawer mobile:** El drawer siempre renderiza en modo `expanded=true` (labels visibles, nombre de usuario, logout) independientemente del viewport. Se controla vía prop `isDrawerOpen` y `onClose` desde AppShell.
 
 ---
 
@@ -529,6 +568,7 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 | S-09 Transferencia | C-06 (mini selector), inputs, C-13 Header |
 | S-10 Confirmación | C-05 SignedAmount, resumen estático, C-13 Header |
 | S-11 Resultado | C-05 SignedAmount (lg), ícono de estado animado, CTAs |
+| S-12 Todos los Movimientos | C-08 TransactionRow (table-row desktop / card mobile), C-15 AccountTypeBadge, C-14 SidebarNav, C-13 Header |
 
 ---
 
