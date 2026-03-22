@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import SignedAmount from '@/components/ui/SignedAmount'
 import type { TransactionStatus } from '@/types/api.types'
 import { Check, Clock, X, RotateCcw, Copy } from 'lucide-react'
+import distribankMark from '@/assets/distribank-mark.svg'
 
 type ResultState = {
   status: TransactionStatus
@@ -93,6 +94,17 @@ export default function TransferResultPage() {
       >
         {cfg.description}
       </motion.p>
+
+      {status === 'COMPLETED' && (
+        <motion.img
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+          src={distribankMark}
+          alt="DistriBank"
+          className="mt-4 h-10 w-10 drop-shadow-[0_0_10px_rgba(26,86,219,0.32)]"
+        />
+      )}
 
       <motion.div
         initial={{ opacity: 0 }}

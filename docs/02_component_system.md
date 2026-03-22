@@ -596,7 +596,7 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 | S-08 Control Tarjeta | C-09 PhysicalCard (detalle), C-10 CardControlSwitch, C-01, C-13 Header |
 | S-09 Transferencia | C-06 (mini selector), inputs, C-13 Header |
 | S-10 Confirmación | C-05 SignedAmount, resumen estático, C-13 Header |
-| S-11 Resultado | C-05 SignedAmount (lg), ícono de estado animado, CTAs |
+| S-11 Resultado | C-05 SignedAmount (lg), ícono de estado animado, C-16 BrandLogo (variante mark en éxito), CTAs |
 | S-12 Todos los Movimientos | C-08 TransactionRow (table-row desktop / card mobile), C-15 AccountTypeBadge, C-14 SidebarNav, C-13 Header |
 
 ---
