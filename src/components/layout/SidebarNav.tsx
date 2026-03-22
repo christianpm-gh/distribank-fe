@@ -1,6 +1,8 @@
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Home, CreditCard, ArrowLeftRight, Receipt, LogOut, PanelLeftClose, PanelLeftOpen } from 'lucide-react'
 import type { ReactNode } from 'react'
+import distribankLogoSidebar from '@/assets/distribank-logo-sidebar.svg'
+import distribankMark from '@/assets/distribank-mark.svg'
 
 type Props = {
   customerName?: string
@@ -36,10 +38,19 @@ export default function SidebarNav({ customerName, customerInitial, isDrawerOpen
   const renderContent = (expanded: boolean, showToggle = true) => (
     <>
       <div className="px-5 py-6">
-        {expanded
-          ? <h2 className="font-sora text-xl font-bold text-text-primary">DistriBank</h2>
-          : <h2 className="font-sora text-xl font-bold text-text-primary text-center">D</h2>
-        }
+        {expanded ? (
+          <img
+            src={distribankLogoSidebar}
+            alt="DistriBank"
+            className="h-auto w-full max-w-[210px] drop-shadow-[0_0_12px_rgba(26,86,219,0.28)]"
+          />
+        ) : (
+          <img
+            src={distribankMark}
+            alt="DistriBank"
+            className="mx-auto h-11 w-11 drop-shadow-[0_0_10px_rgba(26,86,219,0.35)]"
+          />
+        )}
       </div>
 
       <nav className="flex-1 space-y-1 px-3">

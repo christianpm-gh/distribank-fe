@@ -542,6 +542,11 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 - **Background:** `color.surface.card`
 - **Border:** 1px right `color.surface.elevated`
 
+**Branding de cabecera:**
+- Expandido: lockup horizontal de marca (C-16 `BrandLogo`, variante `sidebar`) en lugar del texto plano.
+- Colapsado: isotipo de escudo (C-16 `BrandLogo`, variante `mark`) centrado.
+- Ambos con glow azul sutil para mantener contraste en `color.surface.card`.
+
 **Ítem activo:**
 - Borde izquierdo: 2px `color.brand.primary`
 - Background: `color.surface.elevated`
