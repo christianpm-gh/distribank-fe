@@ -519,12 +519,12 @@ Componente de layout desktop que reemplaza a C-12 BottomNav. Presente en todas l
 | Pantalla | Componentes usados |
 |---|---|
 | S-01 Login | Inputs, botón primario |
-| S-02 Home | C-06 AccountCard ×2, C-12 Nav Bar, C-02 VIPBadge (condicional) |
+| S-02 Home | C-06 AccountCard ×2, C-14 SidebarNav (via AppShell), C-02 VIPBadge (condicional) |
 | S-03 Detalle Débito | C-06 (compact), C-08 TransactionRow ×3, C-02 VIPBadge, C-13 Header |
 | S-04 Detalle Crédito | C-06 (compact), C-07 CreditUsageBar, C-08 ×3, C-02 VIPBadge, C-13 Header |
 | S-05 Historial | C-08 TransactionRow (lista), C-01 StatusBadge, C-13 Header |
 | S-06 Detalle Movimiento | C-05 SignedAmount (lg), C-01, C-11 TransactionTimeline, C-13 Header |
-| S-07 Mis Tarjetas | C-09 PhysicalCard (lista), C-01, C-12 Nav Bar, C-13 Header |
+| S-07 Mis Tarjetas | C-09 PhysicalCard (lista), C-01, C-14 SidebarNav (via AppShell), C-13 Header |
 | S-08 Control Tarjeta | C-09 PhysicalCard (detalle), C-10 CardControlSwitch, C-01, C-13 Header |
 | S-09 Transferencia | C-06 (mini selector), inputs, C-13 Header |
 | S-10 Confirmación | C-05 SignedAmount, resumen estático, C-13 Header |

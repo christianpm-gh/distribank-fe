@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useCards } from '@/hooks/useCards'
 import Header from '@/components/layout/Header'
-import BottomNav from '@/components/layout/BottomNav'
 import PhysicalCard from '@/components/cards/PhysicalCard'
 
 export default function CardsPage() {
@@ -12,7 +11,7 @@ export default function CardsPage() {
   const creditCards = cards?.filter((c) => c.card_type === 'CREDIT') ?? []
 
   return (
-    <div className="min-h-screen bg-surface-base pb-20">
+    <div className="min-h-screen bg-surface-base pb-6">
       <Header title="Mis Tarjetas" />
 
       <main className="space-y-5 px-4">
@@ -60,8 +59,6 @@ export default function CardsPage() {
           </div>
         )}
       </main>
-
-      <BottomNav />
     </div>
   )
 }
