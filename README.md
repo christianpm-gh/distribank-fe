@@ -36,15 +36,6 @@ npm run dev
 
 La aplicación se abre en `http://localhost:5173`.
 
-## Credenciales de demo
-
-| Campo | Valor |
-|---|---|
-| Email | `natalia.ruiz@distribank.mx` |
-| Contraseña | `Distribank2025!` |
-
-El login funciona contra mocks MSW — no se requiere backend.
-
 ## Scripts disponibles
 
 | Comando | Descripción |
