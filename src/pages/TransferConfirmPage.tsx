@@ -74,7 +74,7 @@ export default function TransferConfirmPage() {
     <div className="min-h-screen bg-surface-base">
       <Header title="Confirmar transferencia" />
 
-      <main className="space-y-5 px-4">
+      <main className="mx-auto max-w-[640px] space-y-5 p-[var(--content-padding)]">
         <div className="text-center">
           <SignedAmount amount={amount} size="lg" />
         </div>

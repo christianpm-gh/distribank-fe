@@ -65,7 +65,7 @@ export default function TransferResultPage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-surface-base px-4">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-surface-base px-4 mx-auto max-w-[640px]">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}

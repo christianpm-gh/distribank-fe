@@ -68,7 +68,7 @@ export default function TransferPage() {
     <div className="min-h-screen bg-surface-base">
       <Header title="Nueva transferencia" />
 
-      <main className="space-y-4 px-4">
+      <main className="mx-auto max-w-[640px] space-y-4 p-[var(--content-padding)]">
         <div>
           <label className="mb-1 block text-sm font-medium text-text-secondary">
             Cuenta de origen
