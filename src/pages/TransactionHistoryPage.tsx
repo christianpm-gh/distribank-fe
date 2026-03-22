@@ -27,7 +27,7 @@ export default function TransactionHistoryPage() {
       <Header title="Historial de movimientos" />
 
       <div className="mx-auto max-w-[var(--content-max-width)] px-[var(--content-padding)]">
-        <div className="mb-4 flex gap-2">
+        <div className="mb-4 flex flex-wrap gap-2">
           {filters.map((f) => (
             <button
               key={f.value}
@@ -57,8 +57,9 @@ export default function TransactionHistoryPage() {
           </p>
         )}
 
+        {/* Desktop: table */}
         {filtered && filtered.length > 0 && (
-          <div className="overflow-hidden rounded-lg border border-surface-elevated">
+          <div className="hidden md:block overflow-hidden rounded-lg border border-surface-elevated">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-surface-elevated bg-surface-card text-left text-xs font-medium text-text-secondary">
@@ -81,6 +82,20 @@ export default function TransactionHistoryPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        )}
+
+        {/* Mobile: card stack */}
+        {filtered && filtered.length > 0 && (
+          <div className="md:hidden space-y-3">
+            {filtered.map((tx) => (
+              <TransactionRow
+                key={tx.id}
+                transaction={tx}
+                variant="card"
+                onClick={() => navigate(`/transactions/${tx.transaction_uuid}`)}
+              />
+            ))}
           </div>
         )}
       </div>
