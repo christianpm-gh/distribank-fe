@@ -12,6 +12,7 @@ import CardDetailPage from '@/pages/CardDetailPage'
 import TransferPage from '@/pages/TransferPage'
 import TransferConfirmPage from '@/pages/TransferConfirmPage'
 import TransferResultPage from '@/pages/TransferResultPage'
+import AllTransactionsPage from '@/pages/AllTransactionsPage'
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
           { path: '/accounts/debit', element: <AccountDebitPage /> },
           { path: '/accounts/credit', element: <AccountCreditPage /> },
           { path: '/accounts/:accountId/transactions', element: <TransactionHistoryPage /> },
+          { path: '/transactions', element: <AllTransactionsPage /> },
           { path: '/transactions/:uuid', element: <TransactionDetailPage /> },
           { path: '/cards', element: <CardsPage /> },
           { path: '/cards/:cardId', element: <CardDetailPage /> },

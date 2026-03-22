@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import { Home, CreditCard, ArrowLeftRight, LogOut } from 'lucide-react'
+import { Home, CreditCard, ArrowLeftRight, Receipt, LogOut } from 'lucide-react'
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -11,6 +11,7 @@ type Props = {
 
 const navItems: { label: string; icon: ReactNode; path: string }[] = [
   { label: 'Inicio', icon: <Home size={20} className="text-current" />, path: '/' },
+  { label: 'Movimientos', icon: <Receipt size={20} className="text-current" />, path: '/transactions' },
   { label: 'Tarjetas', icon: <CreditCard size={20} className="text-current" />, path: '/cards' },
   { label: 'Transferir', icon: <ArrowLeftRight size={20} className="text-current" />, path: '/transfer' },
 ]
