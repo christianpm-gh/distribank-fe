@@ -1,40 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" role="img" aria-labelledby="readmeLogoTitle readmeLogoDesc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-labelledby="readmeLogoTitle readmeLogoDesc">
   <title id="readmeLogoTitle">DistriBank</title>
-  <desc id="readmeLogoDesc">Logo de DistriBank para README con fondo oscuro</desc>
+  <desc id="readmeLogoDesc">Logo compacto de DistriBank para cabecera del README</desc>
 
   <defs>
-    <linearGradient id="rmShield" x1="145" y1="36" x2="145" y2="184" gradientUnits="userSpaceOnUse">
+    <linearGradient id="rmShield" x1="122" y1="46" x2="122" y2="174" gradientUnits="userSpaceOnUse">
       <stop stop-color="#60A5FA"/>
       <stop offset="1" stop-color="#1A56DB"/>
     </linearGradient>
 
-    <linearGradient id="rmNetwork" x1="145" y1="74" x2="145" y2="170" gradientUnits="userSpaceOnUse">
+    <linearGradient id="rmNetwork" x1="122" y1="78" x2="122" y2="162" gradientUnits="userSpaceOnUse">
       <stop stop-color="#BFDBFE"/>
       <stop offset="1" stop-color="#60A5FA"/>
     </linearGradient>
 
-    <radialGradient id="rmGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(145 128) rotate(90) scale(84 84)">
-      <stop stop-color="#1A56DB" stop-opacity="0.4"/>
+    <radialGradient id="rmGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(122 114) rotate(90) scale(70 70)">
+      <stop stop-color="#1A56DB" stop-opacity="0.38"/>
       <stop offset="1" stop-color="#1A56DB" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <rect x="6" y="6" width="848" height="288" rx="28" fill="#0F172A" stroke="#273549" stroke-width="2"/>
-  <circle cx="145" cy="128" r="84" fill="url(#rmGlow)"/>
+  <rect x="8" y="8" width="744" height="224" rx="24" fill="#0F172A" stroke="#273549" stroke-width="2"/>
 
-  <g>
-    <path d="M145 24L82 48V102C82 138 108 160 145 178C182 160 208 138 208 102V48L145 24Z" fill="none" stroke="url(#rmShield)" stroke-width="7" stroke-linejoin="round"/>
-    <path d="M145 36L95 56V100C95 128 114 145 145 160C176 145 195 128 195 100V56L145 36Z" fill="none" stroke="url(#rmShield)" stroke-width="5" stroke-linejoin="round" opacity="0.92"/>
+  <g transform="translate(16 0)">
+    <circle cx="106" cy="114" r="70" fill="url(#rmGlow)"/>
 
-    <path d="M145 36V160M109 70L145 102M181 70L145 102M109 70V118M181 70V118M109 118L145 148M181 118L145 148" stroke="url(#rmNetwork)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M106 40L54 60V106C54 136 76 155 106 171C136 155 158 136 158 106V60L106 40Z" fill="none" stroke="url(#rmShield)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M106 50L65 66V104C65 127 81 142 106 155C131 142 147 127 147 104V66L106 50Z" fill="none" stroke="url(#rmShield)" stroke-width="4" stroke-linejoin="round" opacity="0.92"/>
 
-    <circle cx="145" cy="102" r="11" fill="#0F172A" stroke="#93C5FD" stroke-width="5"/>
-    <circle cx="109" cy="70" r="8" fill="#0F172A" stroke="#60A5FA" stroke-width="4"/>
-    <circle cx="181" cy="70" r="8" fill="#0F172A" stroke="#60A5FA" stroke-width="4"/>
-    <circle cx="109" cy="118" r="8" fill="#0F172A" stroke="#60A5FA" stroke-width="4"/>
-    <circle cx="181" cy="118" r="8" fill="#0F172A" stroke="#60A5FA" stroke-width="4"/>
+    <path d="M106 50V155M76 78L106 106M136 78L106 106M76 78V118M136 78V118M76 118L106 144M136 118L106 144" stroke="url(#rmNetwork)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="106" cy="106" r="9.5" fill="#0F172A" stroke="#93C5FD" stroke-width="4"/>
+    <circle cx="76" cy="78" r="6.5" fill="#0F172A" stroke="#60A5FA" stroke-width="3"/>
+    <circle cx="136" cy="78" r="6.5" fill="#0F172A" stroke="#60A5FA" stroke-width="3"/>
+    <circle cx="76" cy="118" r="6.5" fill="#0F172A" stroke="#60A5FA" stroke-width="3"/>
+    <circle cx="136" cy="118" r="6.5" fill="#0F172A" stroke="#60A5FA" stroke-width="3"/>
+
+    <text x="205" y="126" fill="#F1F5F9" font-size="74" font-family="Sora, Inter, sans-serif" font-weight="700" letter-spacing="1.6">DISTRIBANK</text>
+    <text x="208" y="166" fill="#94A3B8" font-size="24" font-family="Inter, sans-serif" font-weight="500" letter-spacing="0.9">SISTEMA BANCARIO DISTRIBUIDO</text>
   </g>
-
-  <text x="300" y="152" fill="#F1F5F9" font-size="84" font-family="Sora, Inter, sans-serif" font-weight="700" letter-spacing="2.4">DISTRIBANK</text>
-  <text x="302" y="200" fill="#94A3B8" font-size="28" font-family="Inter, sans-serif" font-weight="500" letter-spacing="1.2">SISTEMA BANCARIO DISTRIBUIDO</text>
 </svg>

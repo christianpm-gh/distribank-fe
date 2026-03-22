@@ -1,7 +1,7 @@
 # DistriBank Frontend
 
 <p align="center">
-  <img src="src/assets/distribank-logo-readme.svg" alt="DistriBank" width="720" />
+  <img src="src/assets/distribank-logo-readme.svg" alt="DistriBank" width="680" />
 </p>
 
 Frontend SPA para **DistriBank** — sistema bancario distribuido académico.
