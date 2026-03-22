@@ -8,11 +8,42 @@ import { maskAccountNumber, formatRelativeDate } from '@/lib/utils'
 type Props = {
   transaction: Transaction
   size?: 'full' | 'compact'
+  variant?: 'list' | 'table-row'
   onClick?: () => void
 }
 
-export default function TransactionRow({ transaction, size = 'full', onClick }: Props) {
+export default function TransactionRow({ transaction, size = 'full', variant = 'list', onClick }: Props) {
   const statusKey = transaction.status.toLowerCase() as 'completed' | 'pending' | 'failed' | 'rolled_back'
+
+  if (variant === 'table-row') {
+    return (
+      <tr
+        onClick={onClick}
+        className={`border-b border-surface-elevated transition-colors hover:bg-surface-elevated ${
+          onClick ? 'cursor-pointer' : ''
+        }`}
+      >
+        <td className="px-4 py-3 w-12">
+          <DirectionIndicator role={transaction.rol_cuenta} />
+        </td>
+        <td className="px-4 py-3">
+          <TransactionTypeChip type={transaction.transaction_type} />
+        </td>
+        <td className="px-4 py-3 text-sm text-text-primary">
+          {transaction.description || maskAccountNumber(transaction.counterpart_account)}
+        </td>
+        <td className="px-4 py-3 text-xs text-text-muted whitespace-nowrap">
+          {formatRelativeDate(transaction.initiated_at)}
+        </td>
+        <td className="px-4 py-3 text-right">
+          <SignedAmount amount={transaction.amount} role={transaction.rol_cuenta} size="sm" />
+        </td>
+        <td className="px-4 py-3 text-right">
+          <StatusBadge status={statusKey} />
+        </td>
+      </tr>
+    )
+  }
 
   return (
     <div
