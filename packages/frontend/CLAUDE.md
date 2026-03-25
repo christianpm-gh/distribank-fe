@@ -132,4 +132,18 @@ Al terminar la implementación completa:
 1. Verificar que `npm run build` pasa sin errores de TypeScript
 2. Hacer push de todos los commits a `origin main`
 3. Confirmar que Vercel detecta el push y genera el preview URL
+
+## Skills activas
+
+Las siguientes skills definen criterios de diseño y deben leerse antes de
+cualquier tarea de UI:
+
+- `.claude/skills/frontend-design.md` — criterios estéticos, desktop-first,
+  y regla de sync con docs/02_component_system.md
+
+## Contrato documental
+
+`docs/02_component_system.md` es la fuente de verdad de tokens, anatomía y
+comportamiento de todos los componentes. Todo cambio de UI se refleja en este
+archivo en el mismo commit donde ocurre el cambio de código.
 ```
